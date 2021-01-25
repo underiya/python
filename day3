@@ -1,0 +1,181 @@
+Question 1 Write a Python program to remove empty List from List.
+Ans-1)
+
+# Python3 code to demonstrate  
+# Remove empty List from List 
+# using list comprehension 
+
+  
+# Initializing list  
+
+test_list = [5, 6, [], 3, [], [], 9] 
+
+  
+# printing original list  
+
+print("The original list is : " + str(test_list)) 
+
+  
+# Remove empty List from List 
+# using list comprehension 
+
+res = [ele for ele in test_list if ele != []] 
+
+  
+# printing result  
+
+print ("List after empty list removal : " + str(res))
+
+
+
+Question 2
+Write a Python program to remove all duplicates words from a given sentence
+Ans-2)
+
+from collections import Counter 
+
+  
+
+def remov_duplicates(input): 
+
+  
+
+    # split input string separated by space 
+
+    input = input.split(" ") 
+
+  
+
+    # joins two adjacent elements in iterable way 
+
+    for i in range(0, len(input)): 
+
+        input[i] = "".join(input[i]) 
+
+  
+
+    # now create dictionary using counter method 
+
+    # which will have strings as key and their  
+
+    # frequencies as value 
+
+    UniqW = Counter(input) 
+
+  
+
+    # joins two adjacent elements in iterable way 
+
+    s = " ".join(UniqW.keys()) 
+
+    print (s) 
+
+  
+# Driver program 
+
+if _name_ == "_main_": 
+
+    input = 'Python is great and Java is also great'
+
+    remov_duplicates(input) 
+
+
+Question 3
+Write a Python program to find all occurrences of a character in the given string
+Ans-3)
+
+
+# Python3 code to program to find occurrence 
+# to each character in given string 
+
+  
+# initializing string  
+
+inp_str = "GeeksforGeeks"
+
+  
+# using set() + count() to get count  
+# of each element in string  
+out = {x : inp_str.count(x) for x in set(inp_str )}  
+
+  
+# printing result
+[9:15 PM, 1/25/2021] vickey: Question 1
+Write a Python program to merge two files into a third file.
+Ans-1)
+
+
+# Python program to 
+# demonstrate merging 
+# of two files 
+
+  
+
+data = data2 = "" 
+
+  
+# Reading data from file1 
+
+with open('file1.txt') as fp: 
+
+    data = fp.read() 
+
+  
+# Reading data from file2 
+
+with open('file2.txt') as fp: 
+
+    data2 = fp.read() 
+
+  
+# Merging 2 files 
+# To add the data of file2 
+# from next line 
+
+data += "\n"
+
+data += data2 
+
+  
+
+with open ('file3.txt', 'w') as fp: 
+
+    fp.write(data) 
+
+
+
+
+Question 2
+Take two lists as input list1 = [1,2,3,4,5] and list2 = ["a", "b", "c", "d", "e"] From that make a
+dictionary ouput {1:"a", 2:"b", 3:"c", 4:"d", 5:"e"}
+Ans-2)
+
+
+# Python3 code to demonstrate  
+# conversion of lists to dictionary 
+# using dictionary comprehension 
+
+  
+# initializing lists 
+
+list2 = ["a", "b", "c", "d", "e"] 
+
+list1 = [1, 2, 3, 4, 5] 
+
+  
+# Printing original keys-value lists 
+
+print ("Original key list is : " + str(list2)) 
+
+print ("Original value list is : " + str(list1)) 
+
+  
+# using dictionary comprehension 
+# to convert lists to dictionary 
+
+res = {list2[i]: list1[i] for i in range(len(list2))} 
+
+  
+# Printing resultant dictionary  
+
+print ("Resultant dictionary is : " +  str(res))
